@@ -36,6 +36,10 @@ export type {
   IncidentType,
 } from './event'
 
+import type { Dataset } from './dataset'
+import type { Staff } from './staff'
+import type { Incident, Event } from './event'
+
 /**
  * Game State - Complete state of the game
  * Managed by Zustand store

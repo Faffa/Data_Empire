@@ -193,11 +193,12 @@ export function calculateIncidentChance(
   const slaFactor = (100 - sla) / 100
 
   // Risk rating multiplier
-  const riskMultiplier = {
+  const riskMultipliers: Record<Dataset['risk_rating'], number> = {
     low: 1.0,
     medium: 1.5,
     high: 2.0,
-  }[dataset.risk_rating]
+  }
+  const riskMultiplier = riskMultipliers[dataset.risk_rating]
 
   const chance = baseChance * volumeFactor * slaFactor * riskMultiplier
 

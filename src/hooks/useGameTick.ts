@@ -76,13 +76,13 @@ export function useGameTick(options: UseGameTickOptions): TickPerformance {
    * Process a single tick with performance monitoring
    */
   const processTick = useCallback(() => {
-    const startTime = performance.now()
+    const startTime = window.performance.now()
 
     // Execute game tick
     onTick()
 
     // Measure duration
-    const duration = performance.now() - startTime
+    const duration = window.performance.now() - startTime
 
     // Track performance
     tickDurations.current.push(duration)

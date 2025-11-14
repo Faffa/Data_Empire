@@ -5,14 +5,13 @@
  * This is the "heart" of the game loop that runs every second
  */
 
-import type { Dataset, Staff, Incident, Event, GameState } from '@/types'
+import type { Dataset, Staff, Incident, Event } from '@/types'
 import {
   applyMetricDecay,
   calculateSLA,
   calculateTotalDC,
   calculateDatasetStatus,
   calculateIncidentChance,
-  calculateGlobalSLA,
   applyStaffBonuses,
 } from './formulas'
 import { BASE_DECAY_RATE, INCIDENT } from './balance'
