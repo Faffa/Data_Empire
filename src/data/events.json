@@ -1,0 +1,307 @@
+{
+  "events": [
+    {
+      "id": "budget-approval",
+      "title": "Budget Approval",
+      "message": "The board has approved additional funding for data infrastructure improvements!",
+      "type": "bonus",
+      "choices": [
+        {
+          "id": "accept",
+          "label": "Accept Funding",
+          "effects": {
+            "dc_change": 5000
+          }
+        }
+      ],
+      "trigger_chance": 0.002,
+      "trigger_conditions": {
+        "min_sla": 85
+      }
+    },
+    {
+      "id": "audit-scheduled",
+      "title": "Regulatory Audit Scheduled",
+      "message": "A regulatory audit is coming in 2 weeks. All datasets must meet compliance standards.",
+      "type": "audit",
+      "choices": [
+        {
+          "id": "prepare",
+          "label": "Invest in Preparation",
+          "effects": {
+            "dc_change": -2000,
+            "metric_changes": {
+              "T": 5,
+              "A": 10,
+              "C": 15
+            }
+          }
+        },
+        {
+          "id": "risk-it",
+          "label": "Take the Risk",
+          "effects": {}
+        }
+      ],
+      "trigger_chance": 0.001,
+      "trigger_conditions": {
+        "min_dc": 10000
+      }
+    },
+    {
+      "id": "talent-acquisition",
+      "title": "Top Talent Available",
+      "message": "A renowned data architect is available for hire. They would significantly boost your operations.",
+      "type": "choice",
+      "choices": [
+        {
+          "id": "hire",
+          "label": "Hire Immediately",
+          "effects": {
+            "dc_change": -3000,
+            "metric_changes": {
+              "T": 8,
+              "A": 8,
+              "C": 8
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline Offer",
+          "effects": {}
+        }
+      ],
+      "trigger_chance": 0.0015,
+      "trigger_conditions": {
+        "min_dc": 5000
+      }
+    },
+    {
+      "id": "vendor-offer",
+      "title": "Vendor Partnership Offer",
+      "message": "A data platform vendor offers a discount on their enterprise solution.",
+      "type": "choice",
+      "choices": [
+        {
+          "id": "accept-deal",
+          "label": "Accept Partnership",
+          "effects": {
+            "dc_change": -5000,
+            "metric_changes": {
+              "T": 10,
+              "A": 5,
+              "C": 5
+            }
+          }
+        },
+        {
+          "id": "negotiate",
+          "label": "Negotiate Better Terms",
+          "effects": {
+            "dc_change": -3000,
+            "metric_changes": {
+              "T": 5,
+              "A": 5,
+              "C": 5
+            }
+          }
+        },
+        {
+          "id": "decline-offer",
+          "label": "Decline",
+          "effects": {}
+        }
+      ],
+      "trigger_chance": 0.002,
+      "trigger_conditions": {
+        "min_dc": 15000
+      }
+    },
+    {
+      "id": "innovation-grant",
+      "title": "Innovation Grant Awarded",
+      "message": "Your data infrastructure innovations have won a government grant!",
+      "type": "bonus",
+      "choices": [
+        {
+          "id": "claim",
+          "label": "Claim Grant",
+          "effects": {
+            "dc_change": 10000
+          }
+        }
+      ],
+      "trigger_chance": 0.0005,
+      "trigger_conditions": {
+        "min_sla": 95,
+        "min_dc": 50000
+      }
+    },
+    {
+      "id": "market-crash",
+      "title": "Market Downturn",
+      "message": "Economic downturn is forcing budget cuts across the organization.",
+      "type": "incident",
+      "choices": [
+        {
+          "id": "accept-cuts",
+          "label": "Accept Budget Cuts",
+          "effects": {
+            "dc_change": -8000,
+            "metric_changes": {
+              "T": -5,
+              "A": -5,
+              "C": -5
+            }
+          }
+        },
+        {
+          "id": "fight-cuts",
+          "label": "Fight for Budget",
+          "effects": {
+            "dc_change": -3000,
+            "metric_changes": {
+              "T": -2,
+              "A": -2,
+              "C": -2
+            }
+          }
+        }
+      ],
+      "trigger_chance": 0.0008,
+      "trigger_conditions": {
+        "max_sla": 80
+      }
+    },
+    {
+      "id": "customer-complaint",
+      "title": "Customer Data Complaint",
+      "message": "A major customer is complaining about data quality issues in their reports.",
+      "type": "incident",
+      "choices": [
+        {
+          "id": "immediate-fix",
+          "label": "Emergency Fix",
+          "effects": {
+            "dc_change": -2000,
+            "metric_changes": {
+              "A": 15,
+              "C": 10
+            }
+          }
+        },
+        {
+          "id": "investigate",
+          "label": "Investigate First",
+          "effects": {
+            "metric_changes": {
+              "A": 5,
+              "C": 5
+            }
+          }
+        }
+      ],
+      "trigger_chance": 0.002,
+      "trigger_conditions": {
+        "max_sla": 85
+      }
+    },
+    {
+      "id": "tech-conference",
+      "title": "Data Engineering Conference",
+      "message": "The annual data engineering conference is offering early bird tickets.",
+      "type": "choice",
+      "choices": [
+        {
+          "id": "send-team",
+          "label": "Send Team",
+          "effects": {
+            "dc_change": -1500,
+            "metric_changes": {
+              "T": 5,
+              "A": 5,
+              "C": 5
+            }
+          }
+        },
+        {
+          "id": "skip",
+          "label": "Skip This Year",
+          "effects": {}
+        }
+      ],
+      "trigger_chance": 0.002
+    },
+    {
+      "id": "merger-announcement",
+      "title": "Company Merger Announced",
+      "message": "Your company is merging with another. Data integration challenges ahead!",
+      "type": "incident",
+      "choices": [
+        {
+          "id": "prepare",
+          "label": "Start Preparation",
+          "effects": {
+            "dc_change": -5000,
+            "metric_changes": {
+              "T": -10,
+              "A": -10,
+              "C": -5
+            }
+          }
+        },
+        {
+          "id": "wait",
+          "label": "Wait for Details",
+          "effects": {
+            "metric_changes": {
+              "T": -20,
+              "A": -15,
+              "C": -10
+            }
+          }
+        }
+      ],
+      "trigger_chance": 0.0003,
+      "trigger_conditions": {
+        "min_dc": 100000
+      }
+    },
+    {
+      "id": "open-source-contribution",
+      "title": "Open Source Contribution",
+      "message": "Your team has developed a useful data tool. Should you open source it?",
+      "type": "choice",
+      "choices": [
+        {
+          "id": "open-source",
+          "label": "Release as Open Source",
+          "effects": {
+            "dc_change": 3000,
+            "metric_changes": {
+              "T": 3,
+              "A": 3,
+              "C": 3
+            }
+          }
+        },
+        {
+          "id": "keep-private",
+          "label": "Keep Proprietary",
+          "effects": {
+            "metric_changes": {
+              "T": 5,
+              "A": 5,
+              "C": 5
+            }
+          }
+        }
+      ],
+      "trigger_chance": 0.001,
+      "trigger_conditions": {
+        "min_sla": 90
+      }
+    }
+  ]
+}

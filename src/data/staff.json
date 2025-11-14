@@ -1,0 +1,113 @@
+{
+  "staff": [
+    {
+      "id": "data-engineer",
+      "name": "Data Engineer",
+      "role": "data-engineer",
+      "description": "Builds and maintains data pipelines. Improves timeliness of all datasets.",
+      "cost_to_hire": 1000,
+      "salary_per_minute": 10,
+      "effects": {
+        "global_T_bonus": 0.5,
+        "global_A_bonus": 0.2,
+        "global_C_bonus": 0.1,
+        "incident_resolution_speed": 1.1,
+        "dc_generation_bonus": 1.05
+      }
+    },
+    {
+      "id": "data-analyst",
+      "name": "Data Analyst",
+      "description": "Monitors data quality and identifies issues. Improves accuracy across all datasets.",
+      "role": "data-analyst",
+      "cost_to_hire": 1500,
+      "salary_per_minute": 12,
+      "effects": {
+        "global_T_bonus": 0.1,
+        "global_A_bonus": 0.8,
+        "global_C_bonus": 0.3,
+        "incident_resolution_speed": 1.05,
+        "dc_generation_bonus": 1.08
+      }
+    },
+    {
+      "id": "data-architect",
+      "name": "Data Architect",
+      "role": "data-architect",
+      "description": "Designs robust data systems. Improves all metrics and reduces incidents significantly.",
+      "cost_to_hire": 5000,
+      "salary_per_minute": 25,
+      "effects": {
+        "global_T_bonus": 0.5,
+        "global_A_bonus": 0.5,
+        "global_C_bonus": 0.8,
+        "incident_resolution_speed": 1.2,
+        "dc_generation_bonus": 1.15
+      }
+    },
+    {
+      "id": "ml-engineer",
+      "name": "ML Engineer",
+      "role": "ml-engineer",
+      "description": "Implements machine learning for data quality and automation. Massive DC generation boost.",
+      "cost_to_hire": 10000,
+      "salary_per_minute": 40,
+      "effects": {
+        "global_T_bonus": 0.3,
+        "global_A_bonus": 1.0,
+        "global_C_bonus": 0.5,
+        "incident_resolution_speed": 1.15,
+        "dc_generation_bonus": 1.25
+      },
+      "requires_tech": "ml-infrastructure"
+    },
+    {
+      "id": "devops-engineer",
+      "name": "DevOps Engineer",
+      "role": "devops-engineer",
+      "description": "Automates infrastructure and deployment. Greatly speeds up incident resolution.",
+      "cost_to_hire": 7500,
+      "salary_per_minute": 30,
+      "effects": {
+        "global_T_bonus": 0.8,
+        "global_A_bonus": 0.2,
+        "global_C_bonus": 0.3,
+        "incident_resolution_speed": 1.5,
+        "dc_generation_bonus": 1.12
+      },
+      "requires_tech": "ci-cd-automation"
+    },
+    {
+      "id": "data-governance-lead",
+      "name": "Data Governance Lead",
+      "role": "governance-lead",
+      "description": "Ensures compliance and completeness. Essential for regulated datasets.",
+      "cost_to_hire": 12000,
+      "salary_per_minute": 35,
+      "effects": {
+        "global_T_bonus": 0.2,
+        "global_A_bonus": 0.5,
+        "global_C_bonus": 1.5,
+        "incident_resolution_speed": 1.1,
+        "dc_generation_bonus": 1.18
+      },
+      "requires_tech": "regulatory-compliance"
+    },
+    {
+      "id": "site-reliability-engineer",
+      "name": "Site Reliability Engineer (SRE)",
+      "role": "sre",
+      "description": "Maintains system reliability and uptime. Dramatically reduces incident frequency.",
+      "cost_to_hire": 15000,
+      "salary_per_minute": 45,
+      "effects": {
+        "global_T_bonus": 0.6,
+        "global_A_bonus": 0.6,
+        "global_C_bonus": 0.4,
+        "incident_resolution_speed": 2.0,
+        "dc_generation_bonus": 1.2
+      },
+      "requires_tech": "ai-ops"
+    }
+  ]
+}

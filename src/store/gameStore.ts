@@ -23,6 +23,7 @@ import {
   calculatePrestigeBonus,
 } from '@/game/formulas'
 import { SAVE } from '@/game/balance'
+import { getStarterDataset } from '@/data/contentLoader'
 
 /**
  * Game State Interface
@@ -81,7 +82,7 @@ interface GameState {
 
 /**
  * Initial state factory
- * Creates a fresh game state
+ * Creates a fresh game state with starter dataset
  */
 const createInitialState = () => ({
   // Currency
@@ -90,7 +91,7 @@ const createInitialState = () => ({
   prestigeLevel: 0,
 
   // Entities
-  datasets: [] as Dataset[],
+  datasets: [getStarterDataset()], // Start with first dataset!
   purchasedPipelines: [] as string[],
   staff: [] as Staff[],
   unlockedTechnologies: [] as string[],

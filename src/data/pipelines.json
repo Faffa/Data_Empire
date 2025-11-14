@@ -1,0 +1,286 @@
+{
+  "pipelines": [
+    {
+      "id": "data-validation",
+      "name": "Data Validation Layer",
+      "description": "Validates incoming data against schema rules. Catches bad data before it pollutes downstream systems.",
+      "cost_dc": 500,
+      "effects": {
+        "T": 5,
+        "A": 10,
+        "C": 5,
+        "decay_reduction": 0.05,
+        "incident_reduction": 0.1
+      },
+      "per_dataset": true,
+      "category": "validation"
+    },
+    {
+      "id": "automated-testing",
+      "name": "Automated Testing Suite",
+      "description": "Continuous data quality testing. Detects regressions early.",
+      "cost_dc": 1000,
+      "effects": {
+        "T": 3,
+        "A": 15,
+        "C": 5,
+        "decay_reduction": 0.08,
+        "incident_reduction": 0.15
+      },
+      "per_dataset": true,
+      "category": "quality",
+      "requires_tech": "ci-cd-automation"
+    },
+    {
+      "id": "etl-optimization",
+      "name": "ETL Performance Tuning",
+      "description": "Optimizes extract-transform-load processes for faster data delivery.",
+      "cost_dc": 1500,
+      "effects": {
+        "T": 15,
+        "A": 5,
+        "C": 3,
+        "decay_reduction": 0.05,
+        "incident_reduction": 0.05
+      },
+      "per_dataset": true,
+      "category": "etl"
+    },
+    {
+      "id": "incremental-loads",
+      "name": "Incremental Load Strategy",
+      "description": "Only processes changed data instead of full refreshes. Massive time savings.",
+      "cost_dc": 2500,
+      "effects": {
+        "T": 20,
+        "A": 0,
+        "C": 10,
+        "decay_reduction": 0.1,
+        "incident_reduction": 0.08
+      },
+      "per_dataset": true,
+      "category": "etl",
+      "requires_tech": "change-data-capture"
+    },
+    {
+      "id": "stream-processing",
+      "name": "Stream Processing Engine",
+      "description": "Processes data in real-time as it arrives. No more batch delays.",
+      "cost_dc": 5000,
+      "effects": {
+        "T": 25,
+        "A": 10,
+        "C": 5,
+        "decay_reduction": 0.15,
+        "incident_reduction": 0.1
+      },
+      "per_dataset": true,
+      "category": "streaming",
+      "requires_tech": "real-time-processing"
+    },
+    {
+      "id": "data-profiling",
+      "name": "Data Profiling & Monitoring",
+      "description": "Continuously analyzes data patterns and detects anomalies.",
+      "cost_dc": 3000,
+      "effects": {
+        "T": 5,
+        "A": 20,
+        "C": 15,
+        "decay_reduction": 0.1,
+        "incident_reduction": 0.2
+      },
+      "per_dataset": true,
+      "category": "quality"
+    },
+    {
+      "id": "deduplication",
+      "name": "Intelligent Deduplication",
+      "description": "Removes duplicate records using fuzzy matching and ML.",
+      "cost_dc": 2000,
+      "effects": {
+        "T": 0,
+        "A": 15,
+        "C": 10,
+        "decay_reduction": 0.05,
+        "incident_reduction": 0.1
+      },
+      "per_dataset": true,
+      "category": "quality",
+      "requires_tech": "ml-infrastructure"
+    },
+    {
+      "id": "data-lineage",
+      "name": "Data Lineage Tracking",
+      "description": "Tracks data from source to destination. Essential for debugging and compliance.",
+        "cost_dc": 4000,
+      "effects": {
+        "T": 5,
+        "A": 10,
+        "C": 20,
+        "decay_reduction": 0.12,
+        "incident_reduction": 0.15
+      },
+      "per_dataset": true,
+      "category": "governance",
+      "requires_tech": "metadata-management"
+    },
+    {
+      "id": "automated-remediation",
+      "name": "Automated Incident Remediation",
+      "description": "Self-healing pipelines that automatically fix common issues.",
+      "cost_dc": 7500,
+      "effects": {
+        "T": 10,
+        "A": 10,
+        "C": 5,
+        "decay_reduction": 0.2,
+        "incident_reduction": 0.3
+      },
+      "per_dataset": true,
+      "category": "automation",
+      "requires_tech": "ai-ops"
+    },
+    {
+      "id": "caching-layer",
+      "name": "Intelligent Caching",
+      "description": "Caches frequently accessed data to reduce load times.",
+      "cost_dc": 2500,
+      "effects": {
+        "T": 20,
+        "A": 5,
+        "C": 0,
+        "decay_reduction": 0.08,
+        "incident_reduction": 0.05
+      },
+      "per_dataset": true,
+      "category": "performance"
+    },
+    {
+      "id": "compression",
+      "name": "Advanced Data Compression",
+      "description": "Compresses data for faster transfers and lower storage costs.",
+      "cost_dc": 1500,
+      "effects": {
+        "T": 10,
+        "A": 0,
+        "C": 5,
+        "decay_reduction": 0.05,
+        "incident_reduction": 0.03
+      },
+      "per_dataset": true,
+      "category": "performance"
+    },
+    {
+      "id": "parallel-processing",
+      "name": "Parallel Processing Framework",
+      "description": "Distributes workload across multiple nodes for faster processing.",
+      "cost_dc": 6000,
+      "effects": {
+        "T": 30,
+        "A": 5,
+        "C": 10,
+        "decay_reduction": 0.15,
+        "incident_reduction": 0.1
+      },
+      "per_dataset": true,
+      "category": "etl",
+      "requires_tech": "distributed-computing"
+    },
+    {
+      "id": "schema-evolution",
+      "name": "Schema Evolution Management",
+      "description": "Handles schema changes gracefully without breaking downstream systems.",
+      "cost_dc": 3500,
+      "effects": {
+        "T": 8,
+        "A": 12,
+        "C": 15,
+        "decay_reduction": 0.1,
+        "incident_reduction": 0.2
+      },
+      "per_dataset": true,
+      "category": "governance"
+    },
+    {
+      "id": "data-masking",
+      "name": "Sensitive Data Masking",
+      "description": "Automatically masks PII and sensitive data for compliance.",
+      "cost_dc": 2500,
+      "effects": {
+        "T": 0,
+        "A": 10,
+        "C": 10,
+        "decay_reduction": 0.05,
+        "incident_reduction": 0.1
+      },
+      "per_dataset": true,
+      "category": "governance",
+      "requires_tech": "regulatory-compliance"
+    },
+    {
+      "id": "ml-feature-store",
+      "name": "ML Feature Store",
+      "description": "Pre-computed features for machine learning models. Speeds up model training.",
+      "cost_dc": 10000,
+      "effects": {
+        "T": 15,
+        "A": 20,
+        "C": 15,
+        "decay_reduction": 0.15,
+        "incident_reduction": 0.1
+      },
+      "per_dataset": true,
+      "category": "ml",
+      "requires_tech": "ml-infrastructure"
+    },
+    {
+      "id": "anomaly-detection",
+      "name": "ML Anomaly Detection",
+      "description": "Machine learning model that detects unusual data patterns automatically.",
+      "cost_dc": 8000,
+      "effects": {
+        "T": 10,
+        "A": 25,
+        "C": 10,
+        "decay_reduction": 0.12,
+        "incident_reduction": 0.25
+      },
+      "per_dataset": true,
+      "category": "ml",
+      "requires_tech": "ml-infrastructure"
+    },
+    {
+      "id": "data-catalog",
+      "name": "Enterprise Data Catalog",
+      "description": "Searchable catalog of all data assets with business context.",
+      "cost_dc": 5000,
+      "effects": {
+        "T": 5,
+        "A": 15,
+        "C": 25,
+        "decay_reduction": 0.1,
+        "incident_reduction": 0.12
+      },
+      "per_dataset": true,
+      "category": "governance",
+      "requires_tech": "metadata-management"
+    },
+    {
+      "id": "cost-optimization",
+      "name": "Cost Optimization Engine",
+      "description": "Automatically optimizes storage and compute costs without sacrificing performance.",
+      "cost_dc": 12000,
+      "effects": {
+        "T": 10,
+        "A": 10,
+        "C": 10,
+        "decay_reduction": 0.2,
+        "incident_reduction": 0.15
+      },
+      "per_dataset": true,
+      "category": "automation",
+      "requires_tech": "ai-ops"
+    }
+  ]
+}

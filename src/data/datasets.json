@@ -1,0 +1,168 @@
+{
+  "datasets": [
+    {
+      "id": "customer-transactions",
+      "name": "Customer Transactions",
+      "description": "Daily customer purchase data from point-of-sale systems. Essential for revenue tracking and customer analytics.",
+      "base_dc": 60,
+      "volume": 100,
+      "risk_rating": "low",
+      "sla_targets": {
+        "T": 95,
+        "A": 95,
+        "C": 95
+      },
+      "unlock_requirement": null
+    },
+    {
+      "id": "inventory-master",
+      "name": "Inventory Master",
+      "description": "Product inventory levels across all warehouses. Critical for supply chain operations.",
+      "base_dc": 120,
+      "volume": 250,
+      "risk_rating": "low",
+      "sla_targets": {
+        "T": 90,
+        "A": 95,
+        "C": 90
+      },
+      "unlock_requirement": {
+        "dc_threshold": 500
+      }
+    },
+    {
+      "id": "user-analytics",
+      "name": "User Analytics Events",
+      "description": "Clickstream and user behavior tracking. Powers product recommendations and UX improvements.",
+      "base_dc": 180,
+      "volume": 500,
+      "risk_rating": "medium",
+      "sla_targets": {
+        "T": 85,
+        "A": 90,
+        "C": 85
+      },
+      "unlock_requirement": {
+        "dc_threshold": 1000
+      }
+    },
+    {
+      "id": "financial-reporting",
+      "name": "Financial Reporting",
+      "description": "General ledger and financial statements. Regulatory compliance required with strict SLA.",
+      "base_dc": 300,
+      "volume": 150,
+      "risk_rating": "high",
+      "sla_targets": {
+        "T": 99,
+        "A": 99,
+        "C": 99
+      },
+      "unlock_requirement": {
+        "dc_threshold": 2500,
+        "tech_required": "regulatory-compliance"
+      }
+    },
+    {
+      "id": "marketing-attribution",
+      "name": "Marketing Attribution",
+      "description": "Campaign performance and conversion tracking. Links ad spend to revenue outcomes.",
+      "base_dc": 240,
+      "volume": 400,
+      "risk_rating": "medium",
+      "sla_targets": {
+        "T": 80,
+        "A": 90,
+        "C": 80
+      },
+      "unlock_requirement": {
+        "dc_threshold": 5000
+      }
+    },
+    {
+      "id": "real-time-pricing",
+      "name": "Real-Time Pricing Engine",
+      "description": "Dynamic pricing algorithm data. Updates every minute based on demand and competition.",
+      "base_dc": 600,
+      "volume": 1000,
+      "risk_rating": "high",
+      "sla_targets": {
+        "T": 99,
+        "A": 95,
+        "C": 90
+      },
+      "unlock_requirement": {
+        "dc_threshold": 10000,
+        "tech_required": "real-time-processing"
+      }
+    },
+    {
+      "id": "fraud-detection",
+      "name": "Fraud Detection Signals",
+      "description": "Real-time transaction risk scoring. Prevents fraudulent orders and protects revenue.",
+      "base_dc": 900,
+      "volume": 2000,
+      "risk_rating": "high",
+      "sla_targets": {
+        "T": 99,
+        "A": 99,
+        "C": 95
+      },
+      "unlock_requirement": {
+        "dc_threshold": 25000,
+        "tech_required": "ml-infrastructure"
+      }
+    },
+    {
+      "id": "supply-chain-iot",
+      "name": "Supply Chain IoT Sensors",
+      "description": "Temperature, location, and condition monitoring from shipping containers and warehouses.",
+      "base_dc": 1200,
+      "volume": 5000,
+      "risk_rating": "medium",
+      "sla_targets": {
+        "T": 90,
+        "A": 85,
+        "C": 80
+      },
+      "unlock_requirement": {
+        "dc_threshold": 50000,
+        "tech_required": "iot-integration"
+      }
+    },
+    {
+      "id": "customer-360",
+      "name": "Customer 360 View",
+      "description": "Unified customer profile aggregating data from all touchpoints. Powers personalization at scale.",
+      "base_dc": 1800,
+      "volume": 3000,
+      "risk_rating": "high",
+      "sla_targets": {
+        "T": 95,
+        "A": 99,
+        "C": 99
+      },
+      "unlock_requirement": {
+        "dc_threshold": 100000,
+        "tech_required": "data-lake"
+      }
+    },
+    {
+      "id": "predictive-maintenance",
+      "name": "Predictive Maintenance ML",
+      "description": "Machine learning models predicting equipment failures. Prevents costly downtime.",
+      "base_dc": 3000,
+      "volume": 10000,
+      "risk_rating": "medium",
+      "sla_targets": {
+        "T": 90,
+        "A": 95,
+        "C": 90
+      },
+      "unlock_requirement": {
+        "dc_threshold": 250000,
+        "tech_required": "ml-infrastructure"
+      }
+    }
+  ]
+}

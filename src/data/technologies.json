@@ -1,0 +1,187 @@
+{
+  "technologies": [
+    {
+      "id": "ci-cd-automation",
+      "name": "CI/CD Automation",
+      "description": "Continuous integration and deployment pipelines. Unlocks automated testing and DevOps.",
+      "cost_dc": 2000,
+      "tier": 1,
+      "category": "automation",
+      "requires": [],
+      "unlocks": {
+        "datasets": [],
+        "pipelines": ["automated-testing"],
+        "staff_roles": ["devops-engineer"],
+        "global_bonuses": {
+          "dc_multiplier": 1.05,
+          "decay_reduction": 0.02
+        }
+      }
+    },
+    {
+      "id": "regulatory-compliance",
+      "name": "Regulatory Compliance Framework",
+      "description": "GDPR, SOX, and industry compliance tools. Required for financial datasets.",
+      "cost_dc": 5000,
+      "tier": 2,
+      "category": "governance",
+      "requires": [],
+      "unlocks": {
+        "datasets": ["financial-reporting"],
+        "pipelines": ["data-masking"],
+        "staff_roles": ["data-governance-lead"],
+        "global_bonuses": {
+          "sla_bonus": 2
+        }
+      }
+    },
+    {
+      "id": "change-data-capture",
+      "name": "Change Data Capture (CDC)",
+      "description": "Tracks only changed data for incremental processing. Major efficiency gain.",
+      "cost_dc": 8000,
+      "tier": 2,
+      "category": "infrastructure",
+      "requires": ["ci-cd-automation"],
+      "unlocks": {
+        "datasets": [],
+        "pipelines": ["incremental-loads"],
+        "staff_roles": [],
+        "global_bonuses": {
+          "dc_multiplier": 1.1,
+          "decay_reduction": 0.05
+        }
+      }
+    },
+    {
+      "id": "real-time-processing",
+      "name": "Real-Time Stream Processing",
+      "description": "Apache Kafka and stream processing infrastructure. Enables real-time analytics.",
+      "cost_dc": 15000,
+      "tier": 3,
+      "category": "infrastructure",
+      "requires": ["change-data-capture"],
+      "unlocks": {
+        "datasets": ["real-time-pricing"],
+        "pipelines": ["stream-processing"],
+        "staff_roles": [],
+        "global_bonuses": {
+          "dc_multiplier": 1.15,
+          "sla_bonus": 3
+        }
+      }
+    },
+    {
+      "id": "metadata-management",
+      "name": "Enterprise Metadata Management",
+      "description": "Centralized metadata repository with data lineage tracking.",
+      "cost_dc": 20000,
+      "tier": 3,
+      "category": "governance",
+      "requires": ["regulatory-compliance"],
+      "unlocks": {
+        "datasets": [],
+        "pipelines": ["data-lineage", "data-catalog"],
+        "staff_roles": [],
+        "global_bonuses": {
+          "sla_bonus": 4,
+          "incident_reduction": 0.1
+        }
+      }
+    },
+    {
+      "id": "ml-infrastructure",
+      "name": "ML Infrastructure & MLOps",
+      "description": "Machine learning platform with model training and deployment pipelines.",
+      "cost_dc": 35000,
+      "tier": 4,
+      "category": "advanced",
+      "requires": ["real-time-processing"],
+      "unlocks": {
+        "datasets": ["fraud-detection"],
+        "pipelines": ["deduplication", "ml-feature-store", "anomaly-detection"],
+        "staff_roles": ["ml-engineer"],
+        "global_bonuses": {
+          "dc_multiplier": 1.25,
+          "sla_bonus": 5,
+          "incident_reduction": 0.15
+        }
+      }
+    },
+    {
+      "id": "distributed-computing",
+      "name": "Distributed Computing Cluster",
+      "description": "Spark and Hadoop cluster for massive parallel processing.",
+      "cost_dc": 50000,
+      "tier": 4,
+      "category": "infrastructure",
+      "requires": ["real-time-processing"],
+      "unlocks": {
+        "datasets": [],
+        "pipelines": ["parallel-processing"],
+        "staff_roles": [],
+        "global_bonuses": {
+          "dc_multiplier": 1.2,
+          "decay_reduction": 0.1
+        }
+      }
+    },
+    {
+      "id": "iot-integration",
+      "name": "IoT Integration Platform",
+      "description": "Ingests and processes millions of IoT sensor events per second.",
+      "cost_dc": 75000,
+      "tier": 4,
+      "category": "infrastructure",
+      "requires": ["real-time-processing", "distributed-computing"],
+      "unlocks": {
+        "datasets": ["supply-chain-iot"],
+        "pipelines": [],
+        "staff_roles": [],
+        "global_bonuses": {
+          "dc_multiplier": 1.15,
+          "sla_bonus": 3
+        }
+      }
+    },
+    {
+      "id": "data-lake",
+      "name": "Enterprise Data Lake",
+      "description": "Scalable data lake with unified storage for all data types.",
+      "cost_dc": 100000,
+      "tier": 5,
+      "category": "infrastructure",
+      "requires": ["distributed-computing", "metadata-management"],
+      "unlocks": {
+        "datasets": ["customer-360"],
+        "pipelines": [],
+        "staff_roles": [],
+        "global_bonuses": {
+          "dc_multiplier": 1.3,
+          "sla_bonus": 8,
+          "decay_reduction": 0.15
+        }
+      }
+    },
+    {
+      "id": "ai-ops",
+      "name": "AIOps - AI for IT Operations",
+      "description": "Self-healing systems with AI-driven incident prediction and remediation.",
+      "cost_dc": 150000,
+      "tier": 5,
+      "category": "advanced",
+      "requires": ["ml-infrastructure", "metadata-management"],
+      "unlocks": {
+        "datasets": [],
+        "pipelines": ["automated-remediation", "cost-optimization"],
+        "staff_roles": ["site-reliability-engineer"],
+        "global_bonuses": {
+          "dc_multiplier": 1.4,
+          "sla_bonus": 10,
+          "decay_reduction": 0.2,
+          "incident_reduction": 0.3
+        }
+      }
+    }
+  ]
+}
